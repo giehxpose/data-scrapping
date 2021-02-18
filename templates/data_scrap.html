@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% block body %}
+<h1>Match Schedules:</h1>
+    {% for team_list,teamlist2 in x%}
+        <li>
+        {{team_list|safe}} vs {{teamlist2|safe}}
+        </li>
+    {% endfor %}
+{% endblock %}

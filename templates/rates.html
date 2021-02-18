@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% block body %}
+
+    <table class="table table-dark">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>alphaCode</th>
+        <th>name</th>
+        <th>numericCode</th>
+        <th>rate</th>
+        <th>inverseRate</th>
+        <th>date</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for datas in data%}
+      <tr>
+        <td>{{datas['code']}}</td>
+        <td>{{datas['alphaCode']}}</td>
+        <td>{{datas['name']}}</td>
+        <td>{{datas['numericCode']}}</td>
+        <td>{{datas['rate']}}</td>
+        <td>{{datas['inverseRate']}}</td>
+        <td>{{datas['date']}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+{% endblock %}
